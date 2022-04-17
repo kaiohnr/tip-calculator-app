@@ -18,7 +18,7 @@ body {
 
 #title-div {
   text-align: center;
-  margin: 8rem;
+  margin: 0 auto;
 }
 
 #title-text {
@@ -27,4 +27,12 @@ body {
   letter-spacing: 3px;
   font-size: 24px;
   color: var(--verydark-cyan);
+}
+
+#calculator-div {
+  background-color: var(--white);
+  border-radius: 22px;
+  margin: 0 auto;
+  height: 31.25rem;
+  width: 50rem;
 }
