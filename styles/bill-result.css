@@ -1,0 +1,121 @@
+/* "tip amount" and "total" title */
+.person-tip {
+  font-family: 'Space Mono', monospace;
+  color: var(--lightgrayish-cyan);
+  font-size: 0.8rem;
+}
+
+/* "/ person" title */
+.person-placeholder {
+  font-size: 0.74rem;
+  color: var(--grayishcyan);
+}
+
+/* Unordered list with tip results */
+#bill-amount-results {
+  padding: 1rem;
+  border-radius: 16px;
+  height: 312px;
+  width: 342px;
+  background-color: var(--verydark-cyan);
+  margin-top: 2rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Title "tip amount" and "total" */
+#bill-amount-results li p {
+  margin: 0;
+}
+
+/* Paragraph with tip total and amount result */
+.tip-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+
+/* Button to reset values */
+#reset-btn {
+  cursor: pointer;
+  margin: 0rem 0rem 0rem 0rem;
+  height: 40px;
+  width: 95px;
+  border-style: none;
+  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: var(--verydark-cyan);
+  font-size: 1rem;
+  background-color: var(--darkgrayish-cyan);
+}
+
+#reset-btn:hover {
+  background-color: var(--strong-cyan);
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .person-tip {
+    font-family: 'Space Mono', monospace;
+    color: var(--lightgrayish-cyan);
+    font-size: 0.8rem;
+  }
+
+  /* "/ person" title */
+  .person-placeholder {
+    font-size: 0.74rem;
+    color: var(--grayishcyan);
+  }
+
+  /* Unordered list with tip results */
+  #bill-amount-results {
+    padding: 1rem;
+    border-radius: 16px;
+    height: 160px;
+    width: 310px;
+    background-color: var(--verydark-cyan);
+    margin-top: 1rem;
+    margin-left: 1.7rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Title "tip amount" and "total" */
+  #bill-amount-results li p {
+    margin: 0;
+  }
+
+  /* Paragraph with tip total and amount result */
+  .tip-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--strong-cyan);
+  }
+
+  /* Button to reset values */
+  #reset-btn {
+    cursor: pointer;
+    margin: 0rem 0rem 0rem 0rem;
+    height: 40px;
+    width: 95px;
+    border-style: none;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: var(--verydark-cyan);
+    font-size: 1rem;
+    background-color: var(--darkgrayish-cyan);
+  }
+
+  #reset-btn:hover {
+    background-color: var(--strong-cyan);
+    transition: 0.3s;
+  }
+}
