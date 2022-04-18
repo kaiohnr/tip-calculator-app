@@ -1,0 +1,215 @@
+/* Unordered list contains fields inputs */
+#calculation {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Field input with custom value */
+#bill-custom-value {
+  width: 92px;
+}
+
+#bill-custom-value::placeholder {
+  text-align: center;
+  color: var(--darkgrayish-cyan);
+}
+
+/* Title above fields input */
+.title-input {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--darkgrayish-cyan);
+  margin: 2.8rem 0.4rem 0.4rem 0rem;
+}
+
+/* Field input design */
+.value-input {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: var(--verydark-cyan);
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  background-color: var(--verylight-grayish-cyan);
+  text-align: right;
+  font-weight: 700;
+}
+
+.value-input::placeholder {
+  text-align: right;
+  color: var(--darkgrayish-cyan);
+}
+
+.value-input:focus {
+  border: 2px solid #22b19e;
+  outline: none;
+  transition: 0.2s;
+}
+
+.value-input-empty {
+  border: 2px solid #d01e1e;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Title to warn value can't be zero */
+#empty-people {
+  margin: -1.2rem 0rem 0rem 12.8rem;
+  color: #d01e1e;
+  display: none;
+}
+
+/* Bill and Number of people field input */
+#bill-input,
+#numper-people-input {
+  width: 310px;
+}
+
+/* Div with percetange values */
+#bill-percetages-values {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* List items with percetange values */
+.percetages-items {
+  background-color: var(--verydark-cyan);
+  border-radius: 6px;
+  width: 100px;
+  text-align: center;
+  line-height: 10px;
+}
+
+.percetages-items:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: var(--strong-cyan);
+}
+
+.percetages-items:hover p {
+  color: var(--verydark-cyan);
+  transition: 0.3s;
+}
+
+/* Paragraph with percentage value */
+.percertange-value {
+  color: var(--white);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  #calculate-bill-container {
+    margin: -1rem 0rem 0rem 2.5rem;
+  }
+
+  /* Unordered list contains fields inputs */
+  #calculation {
+    list-style: none;
+    display: block;
+  }
+
+  /* Field input with custom value */
+  #bill-custom-value {
+    width: 130px;
+  }
+
+  #bill-custom-value::placeholder {
+    text-align: center;
+    color: var(--darkgrayish-cyan);
+  }
+
+  /* Title above fields input */
+  .title-input {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--darkgrayish-cyan);
+    margin: 2.8rem 0.4rem 0.4rem 0rem;
+  }
+
+  /* Field input design */
+  .value-input {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: var(--verydark-cyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    background-color: var(--verylight-grayish-cyan);
+    text-align: right;
+    font-weight: 700;
+  }
+
+  .value-input::placeholder {
+    text-align: right;
+    color: var(--darkgrayish-cyan);
+  }
+
+  .value-input:focus {
+    border: 2px solid #22b19e;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  .value-input-empty {
+    border: 2px solid #d01e1e;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  /* Title to warn value can't be zero */
+  #empty-people {
+    margin: -1.2rem 0rem 0rem 12.8rem;
+    color: #d01e1e;
+  }
+
+  /* Bill and Number of people field input */
+  #bill-input,
+  #numper-people-input {
+    width: 310px;
+  }
+
+  /* Div with percetange values */
+  #bill-percetages-values {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    column-gap: 4px;
+  }
+
+  /* List items with percetange values */
+  .percetages-items {
+    background-color: var(--verydark-cyan);
+    border-radius: 6px;
+    width: 138px;
+    text-align: center;
+    line-height: 10px;
+  }
+
+  .percetages-items:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: var(--strong-cyan);
+  }
+
+  .percetages-items:hover p {
+    color: var(--verydark-cyan);
+    transition: 0.3s;
+  }
+
+  /* Paragraph with percentage value */
+  .percertange-value {
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+}
