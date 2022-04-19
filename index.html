@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/app.js" defer></script>
     <link rel="icon" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="./styles/bill-result.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/input-values.css">
+    <link rel="stylesheet" href="./styles/input-values.css" />
     <title>Tip Calculator</title>
   </head>
   <body>
@@ -21,38 +22,55 @@
       <ul id="calculation">
         <li id="calculate-bill-container">
           <div id="calculate-bill">
-            <p class="title-input">Bill</p>
-            <input class="value-input" id="bill-input" type="text"  placeholder="0"/>
+            <p class="title-input">
+              Bill <span id="empty-value-bill">Can't be empty</span>
+            </p>
+            <input
+              class="value-input"
+              id="bill-input"
+              type="text"
+              placeholder="0"
+            />
           </div>
           <div id="calculate-bill-percetage">
             <p class="title-input">Select Tip %</p>
             <ul id="bill-percetages-values">
-              <li class="percetages-items"> 
-                <p class="percertange-value">5%</p>
+              <li class="percetages-items">
+                <p class="percertange-value">5<span>%</span></p>
               </li>
               <li class="percetages-items">
-                <p class="percertange-value">10%</p>
+                <p class="percertange-value">10<span>%</span></p>
               </li>
               <li class="percetages-items">
-                <p class="percertange-value">15%</p>
+                <p class="percertange-value">15<span>%</span></p>
               </li>
               <li class="percetages-items">
-                <p class="percertange-value">25%</p>
+                <p class="percertange-value">25<span>%</span></p>
               </li>
               <li class="percetages-items">
-                <p class="percertange-value">50%</p>
+                <p class="percertange-value">50<span>%</span></p>
               </li>
-              <input
-                type="text"
-                class="value-input"
-                id="bill-custom-value"
-                placeholder="Custom"
-              />
+              <li class="percetages-items">
+                <input
+                  type="text"
+                  class="value-input"
+                  id="bill-custom-value"
+                  placeholder="Custom"
+                />
+              </li>
             </ul>
           </div>
-          <div>
-            <p class="title-input">Number of People <span id="empty-people">Can't be empty</span></p>
-            <input type="text" class="value-input" id="numper-people-input" placeholder="0"/>
+          <div id="numper-people-container">
+            <p class="title-input">
+              Number of People
+              <span id="empty-value-people">Can't be empty</span>
+            </p>
+            <input
+              type="text"
+              class="value-input"
+              id="numper-people-input"
+              placeholder="0"
+            />
           </div>
         </li>
         <li id="bill-amount-container">
@@ -60,13 +78,21 @@
             <div id="bill-amount-items">
               <ul id="bill-amount-results">
                 <li>
-                  <p class="person-tip">Tip Amount <br /><span class="person-placeholder">/ person</span></p>
+                  <p class="person-tip">
+                    Tip Amount <span id="dollar-sign-tip-amount">$</span> <br /><span class="person-placeholder">/ person</span>
+                  </p>
                 </li>
-                <li><p class="tip-value" id="tip-amount"><span>$</span>0.00</p></li>
                 <li>
-                  <p class="person-tip">Total <br /><span class="person-placeholder">/ person</span></p>
+                  <p class="tip-value" id="tip-amount">0.00</p>
                 </li>
-                <li><p class="tip-value" id="tip-total"><span>$</span>1000.00</p></li>
+                <li>
+                  <p class="person-tip">
+                    Total <span id="dollar-sign-tip-total">$</span> <br /><span class="person-placeholder">/ person</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="tip-value" id="tip-total">0.00</p>
+                </li>
                 <button id="reset-btn">RESET</button>
               </ul>
             </div>

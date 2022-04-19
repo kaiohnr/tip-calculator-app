@@ -8,6 +8,7 @@
 /* Field input with custom value */
 #bill-custom-value {
   width: 92px;
+  height: 36px;
 }
 
 #bill-custom-value::placeholder {
@@ -53,8 +54,14 @@
 }
 
 /* Title to warn value can't be zero */
-#empty-people {
-  margin: -1.2rem 0rem 0rem 12.8rem;
+#empty-value-bill {
+  margin: -1.2rem 0rem 0rem 11rem;
+  color: #d01e1e;
+  display: none;
+}
+
+#empty-value-people {
+  margin: -1.15rem 0rem 0rem 11.2rem;
   color: #d01e1e;
   display: none;
 }
@@ -102,13 +109,43 @@
   letter-spacing: 2px;
 }
 
+/* Active class to show the selected percetage value number */
+.active {
+  background-color: var(--strong-cyan);
+}
+
+.active p {
+  color: var(--verydark-cyan);
+}
+
+.active input {
+  border: 2px solid #22b19e;
+}
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden !important;
   }
 
+  /* Active class to show the selected percetage value number */
+  .active {
+    background-color: var(--strong-cyan);
+  }
+
+  .active p {
+    color: var(--verydark-cyan);
+  }
+
+  .active input {
+    border: 2px solid #22b19e;
+  }
+
   #calculate-bill-container {
     margin: -1rem 0rem 0rem 2.5rem;
+  }
+
+  #calculate-bill-percetage {
+    margin: -2rem 0rem 0rem 0rem;
   }
 
   /* Unordered list contains fields inputs */
@@ -183,6 +220,19 @@
     display: grid;
     grid-template-columns: repeat(2, 3fr);
     column-gap: 4px;
+  }
+
+  /* Title to warn value can't be zero */
+  #empty-value-bill {
+    margin: -1.2rem 0rem 0rem 11rem;
+    color: #d01e1e;
+    display: none;
+  }
+
+  #empty-value-people {
+    margin: -1.15rem 0rem 0rem 11.2rem;
+    color: #d01e1e;
+    display: none;
   }
 
   /* List items with percetange values */

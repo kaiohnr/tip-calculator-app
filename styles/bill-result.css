@@ -1,3 +1,17 @@
+#dollar-sign-tip-amount {
+  margin: 0rem 0rem 0rem 4rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+
+#dollar-sign-tip-total {
+  margin: 0rem 0rem 0rem 6.3rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem;
+  color: var(--strong-cyan);
+}
+
 /* "tip amount" and "total" title */
 .person-tip {
   font-family: 'Space Mono', monospace;
@@ -26,7 +40,7 @@
 
 /* Title "tip amount" and "total" */
 #bill-amount-results li p {
-  margin: 0;
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 /* Paragraph with tip total and amount result */
@@ -34,14 +48,15 @@
   font-family: 'Space Mono', monospace;
   font-size: 2.5rem;
   color: var(--strong-cyan);
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 /* Button to reset values */
 #reset-btn {
   cursor: pointer;
-  margin: 0rem 0rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0.5rem;
   height: 40px;
-  width: 95px;
+  width: 168px;
   border-style: none;
   border-radius: 8px;
   font-family: 'Space Mono', monospace;
@@ -77,7 +92,7 @@
   #bill-amount-results {
     padding: 1rem;
     border-radius: 16px;
-    height: 160px;
+    height: 205px;
     width: 310px;
     background-color: var(--verydark-cyan);
     margin-top: 1rem;
@@ -87,9 +102,23 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #dollar-sign-tip-amount {
+    margin: 0rem 0rem 0rem 0rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--strong-cyan);
+  }
+  
+  #dollar-sign-tip-total {
+    margin: 0rem 0rem 0rem 2.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--strong-cyan);
+  }
+
   /* Title "tip amount" and "total" */
   #bill-amount-results li p {
-    margin: 0;
+    margin: 0rem 0rem 0rem 0rem;
   }
 
   /* Paragraph with tip total and amount result */
@@ -99,10 +128,14 @@
     color: var(--strong-cyan);
   }
 
+  #numper-people-container {
+    margin: -2rem 0rem 0rem 0rem;
+  }
+
   /* Button to reset values */
   #reset-btn {
     cursor: pointer;
-    margin: 0rem 0rem 0rem 0rem;
+    margin: 1rem 0rem 0rem 2rem;
     height: 40px;
     width: 95px;
     border-style: none;

@@ -11,6 +11,11 @@
   --white: rgb(255, 255, 255);
 }
 
+::selection {
+  color: var(--verydark-cyan);
+  background: rgb(122, 228, 228);
+}
+
 #calculation {
   padding: 0;
   margin: 0;
