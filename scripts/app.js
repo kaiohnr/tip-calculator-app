@@ -12,21 +12,26 @@ class calculatorTip {
 
   resetBtn = document.getElementById('reset-btn');
 
-  emptyValueBillTitle = document.getElementById('empty-value-bill')
-  emptyValuePeopleTitle = document.getElementById('empty-value-people')
-
-
-
+  emptyValueBillTitle = document.getElementById('empty-value-bill');
+  emptyValuePeopleTitle = document.getElementById('empty-value-people');
 
   constructor() {
     this.selectPercentageValues();
 
-    this.billValueEl.addEventListener('keyup',this.calculateBillValuePerPerson.bind(this));
-    this.numberOfPeopleEl.addEventListener('keyup', this.calculateBillValuePerPerson.bind(this));
+    this.billValueEl.addEventListener(
+      'keyup',
+      this.calculateBillValuePerPerson.bind(this)
+    );
+    this.numberOfPeopleEl.addEventListener(
+      'keyup',
+      this.calculateBillValuePerPerson.bind(this)
+    );
 
     this.billValueEl.addEventListener('keyup', this.calculateTipPerPerson.bind(this));
-    this.numberOfPeopleEl.addEventListener('keyup',this.calculateTipPerPerson.bind(this));
-
+    this.numberOfPeopleEl.addEventListener(
+      'keyup',
+      this.calculateTipPerPerson.bind(this)
+    );
 
     this.resetBtn.addEventListener('click', this.resetValues.bind(this));
   }
@@ -89,12 +94,18 @@ class calculatorTip {
   calculateTipPerPerson() {
     let tipPerPerson = 0;
     if (this.getCustomPercentageValue() === 0) return;
-    this.addEmptyClass()
-    this.removeEmptyClass()
+    this.addEmptyClass();
+    this.removeEmptyClass();
 
-    if (this.billValueEl.value && this.numberOfPeopleEl.value && this.getCustomPercentageValue() != 0) {
-      tipPerPerson = this.billValueEl.value/100 * this.getCustomPercentageValue() / this.numberOfPeopleEl.value
-      this.tipAmountValueEl.textContent = tipPerPerson.toFixed(2)
+    if (
+      this.billValueEl.value &&
+      this.numberOfPeopleEl.value &&
+      this.getCustomPercentageValue() != 0
+    ) {
+      tipPerPerson =
+        ((this.billValueEl.value / 100) * this.getCustomPercentageValue()) /
+        this.numberOfPeopleEl.value;
+      this.tipAmountValueEl.textContent = tipPerPerson.toFixed(2);
     }
     return tipPerPerson;
   }
@@ -102,38 +113,56 @@ class calculatorTip {
   // Tip total / person
   calculateBillValuePerPerson() {
     if (this.getCustomPercentageValue() === 0) return;
-    this.addEmptyClass()
-    this.removeEmptyClass()
+    this.addEmptyClass();
+    this.removeEmptyClass();
 
     if (this.billValueEl.value || this.numberOfPeopleEl.value == '') {
       this.tipTotalValueEl.textContent = '0.00';
-      this.tipAmountValueEl.textContent = '0.00'
+      this.tipAmountValueEl.textContent = '0.00';
     }
     if (this.billValueEl.value && this.numberOfPeopleEl.value != '') {
-      const billValuePerPerson = this.billValueEl.value / this.numberOfPeopleEl.value + +this.calculateTipPerPerson();
-      this.tipTotalValueEl.textContent = billValuePerPerson.toFixed(2)
+      const billValuePerPerson =
+        this.billValueEl.value / this.numberOfPeopleEl.value +
+        +this.calculateTipPerPerson();
+      this.tipTotalValueEl.textContent = billValuePerPerson.toFixed(2);
     }
   }
 
   addEmptyClass() {
-    if (this.billValueEl.value != '' && this.getCustomPercentageValue() != 0 && this.numberOfPeopleEl.value == '') {
-      this.numberOfPeopleEl.classList.add('value-input-empty')
-      this.emptyValuePeopleTitle.style.display= 'block'
+    if (
+      this.billValueEl.value != '' &&
+      this.getCustomPercentageValue() != 0 &&
+      this.numberOfPeopleEl.value == ''
+    ) {
+      this.numberOfPeopleEl.classList.add('value-input-empty');
+      this.emptyValuePeopleTitle.style.display = 'block';
     }
-    if (this.numberOfPeopleEl.value != '' && this.getCustomPercentageValue() != 0 && this.billValueEl.value == '') {
-      this.billValueEl.classList.add('value-input-empty')
-      this.emptyValueBillTitle.style.display = 'block'
+    if (
+      this.numberOfPeopleEl.value != '' &&
+      this.getCustomPercentageValue() != 0 &&
+      this.billValueEl.value == ''
+    ) {
+      this.billValueEl.classList.add('value-input-empty');
+      this.emptyValueBillTitle.style.display = 'block';
     }
   }
 
   removeEmptyClass() {
-    if (this.billValueEl.value != '' && this.getCustomPercentageValue() != 0 && this.numberOfPeopleEl.value != '') {
-      this.numberOfPeopleEl.classList.remove('value-input-empty')
-      this.emptyValuePeopleTitle.style.display= 'none'
+    if (
+      this.billValueEl.value != '' &&
+      this.getCustomPercentageValue() != 0 &&
+      this.numberOfPeopleEl.value != ''
+    ) {
+      this.numberOfPeopleEl.classList.remove('value-input-empty');
+      this.emptyValuePeopleTitle.style.display = 'none';
     }
-    if (this.numberOfPeopleEl.value != '' && this.getCustomPercentageValue() != 0 && this.billValueEl.value != '') {
-      this.billValueEl.classList.remove('value-input-empty')
-      this.emptyValueBillTitle.style.display = 'none'
+    if (
+      this.numberOfPeopleEl.value != '' &&
+      this.getCustomPercentageValue() != 0 &&
+      this.billValueEl.value != ''
+    ) {
+      this.billValueEl.classList.remove('value-input-empty');
+      this.emptyValueBillTitle.style.display = 'none';
     }
   }
 
